@@ -11,16 +11,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            color: Colors.white,
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.fromLTRB(50, 10, 20, 5),
-            child: Text('Hello'),
-          ),
-        ),
+            child: Column(
+          children: <Widget>[
+            CircleAvatar(
+              backgroundImage: AssetImage('images/chibuzor.jpg'),
+              radius: 50.0,
+            ),
+            Text(
+              'Chibuzor Okafor',
+              style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
+          ],
+        )),
       ),
     );
   }
